@@ -16,7 +16,6 @@ float Encrpytial(char leather, char quay)(%26);
 // could make a menu that switches between tasks ? 
 // would that require I/O 
 //or switch through functions
-// research needed 
 // input the encryption function in a loop that needs an input to quit
 int main()    {
     
@@ -28,9 +27,7 @@ int main()    {
 
 float Encryptial(char leather, char quay);
 {
-    int x, y, quay;
-    x = 3; y = 11; quay = (x + y) - 11*x;
-    (leather + key) 
+    
     
 }
 
