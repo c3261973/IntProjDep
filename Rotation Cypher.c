@@ -4,7 +4,6 @@
 void start_menu(void);
 void encrypt_file(void);
 void decrypt_file(void);    //function names //
-void caesar_encrypt_file;       //added new functions for caesar//
 
 int main(int argc, char** argv)  
 {
@@ -23,9 +22,9 @@ void start_menu(void) //menu funtion block using switch for options//
             printf("3. Exit \n");
             scanf("%d", &choice);
                 
-                switch(choice)
+                switch(choice) // switch with menu options using choice int//
                 {
-                    case 1: encrypt_file();
+                    case 1: encrypt_file();     
                         break;
                     case 2: decrypt_file();
                         break;
@@ -108,39 +107,7 @@ void decrypt_file(void)     //rotation cypher decryption function code block - b
     return;     //return to main//
 }
 
-    char input_file[20], output_file[20],ch;
-    int num_ascii;
-    FILE *fd1, *fd2;
-    
-    printf("Enter the name of the file to be encrypted: \n");
-    scanf("%s", input_file);
-    
-    printf("Enter the name of the output file: \n");
-    scanf("%s", output_file);
-    
-    fd1 = fopen(input_file, "r");
-        if(fd1 == NULL)
-        {
-            printf("File does not exist.. \n");
-            exit(0);
-        }
-        else
-        {
-            fd2 = fopen(output_file, "w");
-            ch = fgetc(fd1);
-                while(ch != EOF)
-                {
-                    num_ascii = (int)ch;
-                    num_ascii = num_ascii + 3;
-                    fprintf(fd2, "%c", num_ascii);
-                    ch = fgetc(fd1);
-                }
-            fclose(fd2);
-        }
-    fclose(fd1);
-    printf("Encrypted file complete, named: %s.", output_file);
-    return;
-
+  
 
 
 
